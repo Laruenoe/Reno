@@ -1,17 +1,17 @@
 from flask import Flask, jsonify
 app = Flask(__name__)
 
-@app.route("/home")
+@app.route("/")
 def home():
-    return "Hello & Welcome to My AWS Web Service that is connected in {port}"
+    return "Hello & Welcome to My AWS Web Server"
 
-@app.route("/about-me")
+@app.route("/about")
 def index():
-    return "About-Me"
+    return "About"
 
 @app.route("/data")
 def data():
-    sample_data = {"Name" : "Harry", "Age" : 20, "Class" : "LC01"}
+    sample_data = {"Name" : "Reno", "Age" : 19, "Class" : "LC01"}
     return jsonify(sample_data)
 
 if __name__ == "__main__":
